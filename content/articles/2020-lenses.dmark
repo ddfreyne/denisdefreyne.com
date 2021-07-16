@@ -2,8 +2,9 @@
 title: "Using Lenses to build complex React forms in a type-safe way"
 index: false
 published_on: "2020-11-24"
-revised_on: "2021-06-21"
+revised_on: "2021-07-16"
 reading_time_complexity: 1
+toc: true
 draft: true
 excerpt: "Lenses enable building complex forms quickly and with confidence. Lenses themselves are simple, but they provide significant benefits when used with React forms with TypeScript, reducing the change of mistakes and speeding up the feedback loop."
 ---
@@ -12,7 +13,9 @@ excerpt: "Lenses enable building complex forms quickly and with confidence. Lens
 
 #p In this article, I propose an alternative approach to building forms, one based on %em{lenses}, tightly integrated with TypeScript%sidenote{The approach outlined in this article will work with JavaScript as well, but you’ll not get the type-safety benefits.} to tighten the feedback loop, reducing the change of mistakes and speeding up development.
 
-#h2 The trouble with forms
+#section
+  #h Table of contents
+  ::TOC::
 
 #p During my time at BCG Digital Ventures, I worked on an internal tool where one particular page has a remarkably complex form. It had dozens and dozens of text fields, radio buttons, checkboxes, and dropdowns, and in addition to all that, it had editable lists inside editable lists, with even more form elements inside.
 
