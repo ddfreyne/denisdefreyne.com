@@ -2,13 +2,91 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="http://denisdefreyne.com/">
   <id>http://denisdefreyne.com/</id>
   <title>Denis Defreyne</title>
-  <updated>2021-06-12T22:00:00Z</updated>
+  <updated>2021-07-16T22:00:00Z</updated>
   <link rel="alternate" href="http://denisdefreyne.com/" type="text/html"/>
   <link rel="self" href="http://denisdefreyne.com/feed.xml" type="application/atom+xml"/>
   <author>
     <name>Denis Defreyne</name>
     <uri>https://denisdefreyne.com</uri>
   </author>
+  <entry>
+    <id>tag:denisdefreyne.com,2021-07-16:/articles/2021-proposal-documents/</id>
+    <title type="html">Drive change by writing structured proposal documents</title>
+    <published>2021-07-16T22:00:00Z</published>
+    <updated>2021-07-16T22:00:00Z</updated>
+    <link rel="alternate" href="http://denisdefreyne.com/articles/2021-proposal-documents/" type="text/html"/>
+    <content type="html">&lt;p&gt;In any collaborative environment, opportunities for change often arise. When such an opportunity presents itself, write up a structured proposal document describing how to tackle this opportunity. With this document, a decision on whether or not to implement the proposal can be made quickly and confidently.&lt;/p&gt;&lt;p&gt;I use this approach extensively, both at my employers as well as for side projects that are used by others. These documents are often called &lt;i&gt;RFC&lt;/i&gt;s (short for &lt;i&gt;requests for comment&lt;/i&gt;).&lt;/p&gt;&lt;div class="l1 section"&gt;
+&lt;div class="h2-separator"&gt;&lt;/div&gt;
+&lt;h2 id="motivation"&gt;&lt;span&gt;&lt;span&gt;Motivation&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Whether when working alone or collaborating with others, opportunities for change will come up. While many such changes are trivial, some are not:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Changes that impact others,&lt;/strong&gt; such as restructuring the filesystem of a project, or reformatting all source code to the latest standards.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Changes that are not easily reversible,&lt;/strong&gt; such as the choice of programming language or framework to use for a new project, or the switch to a new paid subscription of a third-party tool.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To make decisions on how to move forward with such opportunities for change, we need to have as much information as possible about the change and its implications.&lt;/p&gt;
+&lt;p&gt;We want to collect all relevant information regarding a potential decision from all stakeholders. At the same time, we want to make sure that all stakeholders understand the context and motivation around this change, and the impact it will have.&lt;/p&gt;
+&lt;/div&gt;&lt;div class="l1 section"&gt;
+&lt;div class="h2-separator"&gt;&lt;/div&gt;
+&lt;h2 id="proposed-solution"&gt;&lt;span&gt;&lt;span&gt;Proposed solution&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;When an opportunity for change arises, write up a document that describes how to take advantage of this opportunity. This proposal document has the following format:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Context (optional)&lt;/strong&gt;: What background information (if any) is needed to understand the rest of this document? Consider adding a glossary in this section to clarify any jargon that readers might not be familiar with.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Motivation&lt;/strong&gt;: What pain point does this proposal address?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Solution constraints (optional)&lt;/strong&gt;: What is the set of requirements for every solution for the aforementioned pain point? Consider organising these in “must have”, “should have”, “nice to have”, and “optional”.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Proposed solution&lt;/strong&gt;: How will the aforementioned pain points be addressed? What are the implications of this proposed solution? What are the advantages and disadvantages of this solution? Consider adding examples of how this solution would work.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Alternative solutions (optional)&lt;/strong&gt;: What other solutions would also alleviate this pain point? What advantages and disadvantages do they have compared to the proposed solution?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Open questions and concerns (optional)&lt;/strong&gt;: Are there any questions that have not (yet) been answered? Are there concerns that have not (yet) been taken into account? In this section, surface all questions and concerns, even if they might not need to be tackled in this document.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Write this document on a platform that supports collaboration, and has fine-grained commenting functionality, such as Google Docs or Notion. While other approaches work (e.g. sending Word documents and updates to them over email), they have long and cumbersome feedback loops. A collaborative platform tightens the feedback loop, and thereby increases participation. Increased participation means more information is shared, and thus increases the quality of the decisions.&lt;/p&gt;
+&lt;p&gt;Perform research for decisions asynchronously. Avoid making decisions synchronously, e.g. in a real-time meeting.&lt;/p&gt;
+&lt;div class="l2 section"&gt;
+
+&lt;div class="run-in"&gt;
+&lt;h3 id="ownership"&gt;&lt;span&gt;&lt;span&gt;Ownership&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Ensure that a single person is assigned as the owner of this document. The owner is responsible for writing and maintaining this document. All suggested changes to the document should go through the document’s owner. &lt;span class="sidenote-pre text-muted"&gt;(&lt;/span&gt;&lt;span class="sidenote text-muted"&gt;If “owner” sounds too rigid, consider “steward” instead.&lt;/span&gt;&lt;span class="sidenote-post text-muted"&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="l2 section"&gt;
+
+&lt;div class="run-in"&gt;
+&lt;h3 id="lifecycle"&gt;&lt;span&gt;&lt;span&gt;Lifecycle&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Until the proposed solution in this document is accepted, keep the proposal document updated with any new information that comes in. Ensure that all people involved are aware of updates to the document.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Ensure that there is a clear point where the proposal is either accepted or rejected. Setting a deadline up front can be useful.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="l2 section"&gt;
+
+&lt;div class="run-in"&gt;
+&lt;h3 id="example"&gt;&lt;span&gt;&lt;span&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;This very document you’re reading is structured using this format.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="l2 section"&gt;
+
+&lt;div class="run-in"&gt;
+&lt;h3 id="advantages"&gt;&lt;span&gt;&lt;span&gt;Advantages&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;By documenting the decisions around proposals, a historical record can be kept, and can be referred to later on if needed. In particular, it can shed clarity on the constraints that were (and perhaps no longer are) present when a past decision was made.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This approach ensures all potential stakeholders are involved in the process, and that their input is taken into account.&lt;/p&gt;
+&lt;p&gt;With this approach, not everyone is &lt;em&gt;required&lt;/em&gt; to participate in the process. In this way, this approach can be used to &lt;a href="/notes/lrz9n-zhpnf-xzllm/"&gt;get people on board with breaking changes by radiating intent&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="l2 section"&gt;
+
+&lt;div class="run-in"&gt;
+&lt;h3 id="disadvantages"&gt;&lt;span&gt;&lt;span&gt;Disadvantages&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;This approach is not well-suited for trivial decisions, nor for urgent decisions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="l1 section"&gt;
+&lt;div class="h2-separator"&gt;&lt;/div&gt;
+&lt;h2 id="open-questions-and-concerns"&gt;&lt;span&gt;&lt;span&gt;Open questions and concerns&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;It might be worth adding a &lt;a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix"&gt;RACI matrix&lt;/a&gt; to the document, to state who is responsible, accountable, consulted, and informed.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It might be worth documenting the thought process that went into the proposed solution. References (bibliography) would then probably go into a subsection of the &lt;i&gt;Proposed solution&lt;/i&gt; section.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</content>
+    <summary type="html">In any collaborative environment, opportunities for change often arise. When such an opportunity presents itself, write up a structured proposal document describing how to tackle this opportunity. With this document, a decision on whether or not to implement the proposal can be made quickly and confidently.</summary>
+  </entry>
   <entry>
     <id>tag:denisdefreyne.com,2021-06-12:/articles/2021-budget-replacement/</id>
     <title type="html">Budget for replacing past purchases</title>
