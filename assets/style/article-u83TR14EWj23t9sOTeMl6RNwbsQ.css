@@ -2352,6 +2352,20 @@ ol {
   margin-top: 1.5rem;
   padding-left: 0; }
 
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0; }
+
+ol.toc {
+  padding-left: 2rem; }
+
+ol.toc li {
+  color: var(--gray-500);
+  padding-left: 0.5rem;
+  list-style-type: upper-roman; }
+
 a {
   color: var(--color-link);
   text-underline-offset: 0.1875em; }
