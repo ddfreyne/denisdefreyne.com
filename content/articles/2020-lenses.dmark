@@ -5,7 +5,7 @@ published_on: "2020-11-24"
 revised_on: "2021-07-16"
 reading_time_complexity: 1
 toc: true
-draft: true
+draft: false
 excerpt: "Lenses enable building complex forms quickly and with confidence. Lenses themselves are simple, but they provide significant benefits when used with React forms with TypeScript, reducing the change of mistakes and speeding up the feedback loop."
 ---
 
