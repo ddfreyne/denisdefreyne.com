@@ -117,6 +117,7 @@ compile '/articles/*.{md,md.erb,dmark}' do
   filter :erb if item.identifier.exts.include?('erb')
   filter :dmark if item.identifier.exts.include?('dmark')
   filter :kramdown, input: 'GFM' if item.identifier.exts.include?('md')
+  filter :toc
 
   filter :h2_separator
   filter :run_in_headers

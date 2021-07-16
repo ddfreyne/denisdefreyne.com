@@ -29,19 +29,10 @@ Class.new(Nanoc::Filter) do
       end
 
       # Build table of contents
-      res = +'<ol class="pl-8">'
+      res = +'<ol class="toc">'
       nested_headers.each do |header|
         res << '<li>'
         res << %(<a href="##{header[:id]}">#{header[:title]}</a>)
-        if header[:children].any?
-          res << '<ol class="pl-7">'
-          header[:children].each do |sub_header|
-            res << '<li>'
-            res << %(<a href="##{sub_header[:id]}">#{sub_header[:title]}</a>)
-            res << '</li>'
-          end
-          res << '</ol>'
-        end
         res << '</li>'
       end
       res << '</ol>'
