@@ -115,10 +115,18 @@ end
 passthrough '/articles/**/sample/**/*'
 passthrough '/articles/**/*.{png,jpg}'
 
+KRAMDOWN_OPTIONS = {
+  input: 'GFM',
+  typographic_symbols: {
+    ndash: '--',
+    mdash: '---',
+  }
+}
+
 compile '/articles/*.{md,md.erb,dmark}' do
   filter :erb if item.identifier.exts.include?('erb')
   filter :dmark if item.identifier.exts.include?('dmark')
-  filter :kramdown, input: 'GFM' if item.identifier.exts.include?('md')
+  filter :kramdown, **KRAMDOWN_OPTIONS if item.identifier.exts.include?('md')
   filter :toc
 
   filter :h2_separator
@@ -144,7 +152,7 @@ end
 compile '/notes/*' do
   filter :wikilinks
   filter :mark
-  filter :kramdown, input: 'GFM'
+  filter :kramdown, **KRAMDOWN_OPTIONS
   filter :footnotes
   filter :autolink
   filter :typography
