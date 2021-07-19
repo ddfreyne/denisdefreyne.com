@@ -2349,6 +2349,13 @@ mark {
   background: var(--color-mark-bg);
   color: var(--color-fg-mark); }
 
+.path {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  font-style: italic; }
+
 /** WRAPPER **********/
 @media screen {
   .wrapper {
