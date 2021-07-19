@@ -222,6 +222,15 @@ mark {
   color: var(--color-fg-mark);
 }
 
+.path {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+  font-style: italic;
+}
+
 /** WRAPPER **********/
 
 @media screen {
