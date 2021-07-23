@@ -114,6 +114,14 @@ ol {
   padding-left: 1.5rem;
 }
 
+ol {
+  list-style-type: decimal;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
 ul ul,
 ul ol,
 ol ul,
@@ -121,8 +129,8 @@ ol ol {
   margin-top: 0;
 }
 
-li:first-child > p:first-child {
-  margin-top: 0;
+.spaced > li {
+  margin-top: 1.5rem;
 }
 
 a {
