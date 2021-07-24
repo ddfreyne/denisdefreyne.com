@@ -1,7 +1,7 @@
 <!DOCTYPE html><html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile# zotero: http://www.zotero.org/namespaces/export#" lang="en"><head>
         <meta charset="utf-8">
 
-        <title>Programming language design</title>
+        <title>Common function names</title>
 
         <!-- metadata -->
 
@@ -11,10 +11,10 @@
 
         <meta property="og:site_name" content="denisdefreyne.com">
 
-        <meta property="og:url" content="https://denisdefreyne.com/notes/htf7w-pvffc-7kmch/">
+        <meta property="og:url" content="https://denisdefreyne.com/notes/ffl7h-kmvrm-kkt9z/">
 
-        <meta property="og:title" content="Programming language design">
-        <meta property="dc.title" content="Programming language design">
+        <meta property="og:title" content="Common function names">
+        <meta property="dc.title" content="Common function names">
 
         <meta property="og:type" content="website">
 
@@ -68,28 +68,44 @@
           <div class="">Backlinks:</div>
           <div class="pb-3 text-indent-inverted">
             
-              <div><a href="../krhpl-ztflh-rncvr/">Perpetual interests</a></div>
-            
-              <div><a href="../tvtfx-rkvxx-tm9px/">What would I change about programming language X?</a></div>
+              <div><a href="../htf7w-pvffc-7kmch/">Programming language design</a></div>
             
           </div>
         
       </div>
     </div>
 
-    <h1>Programming language design</h1>
+    <h1>Common function names</h1>
 
     
-<p>See the&nbsp;following:</p>
+<p>The same functionality appears in different programming languages under different names. Here’s a (probably rather futile) attempt at gathering some interesting&nbsp;distinctions.</p>
 
+<h2 id="removekeep-elements-matching-predicate-from-array">Remove/keep elements matching predicate from&nbsp;array</h2>
 <ul>
-  <li><a href="../zlc9l-nrkfw-wztwz/">Module systems in programming languages</a></li>
-  <li><a href="../vttk7-v9zlv-h7rzh/">Tooling for a good programming language</a></li>
-  <li><a href="../fktz7-xvp7x-pcvzw/">Syntax styles in programming languages</a></li>
-  <li><a href="../ffl7h-kmvrm-kkt9z/">Common function names</a></li>
+  <li>
+<code>filter</code> (what is the opposite though?)</li>
+  <li>
+<code>select</code> + <code>reject</code> (Smalltalk, Ruby)</li>
+  <li>
+<code>dropWhere</code> + <code>keepWhere</code> (I invented these)</li>
 </ul>
 
-<p>A thought exercise that I’ve been pursuing: <a href="../tvtfx-rkvxx-tm9px/">What would I change about programming language X?</a></p>
+<h2 id="map-elements">Map&nbsp;elements</h2>
+<p>This applies a map to the elements of an&nbsp;array.</p>
+
+<ul>
+  <li><code>map</code></li>
+  <li>
+<code>collect</code> (Smalltalk, Ruby)</li>
+</ul>
+
+<h2 id="map-values">Map&nbsp;values</h2>
+<p>This applies a map to the values of a&nbsp;hash/dict/map.</p>
+
+<ul>
+  <li>
+<code>transform_values</code> (Ruby)</li>
+</ul>
 
   </div>
 
