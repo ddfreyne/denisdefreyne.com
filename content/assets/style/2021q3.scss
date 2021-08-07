@@ -156,6 +156,10 @@ ol {
   @extend .mt-3;
 }
 
+ul.no-bullets {
+  list-style-type: none;
+}
+
 .block-detail {
   @extend .pl-3;
 }
