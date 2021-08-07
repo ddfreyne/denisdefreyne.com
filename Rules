@@ -56,7 +56,7 @@ passthrough '/tmp/**/*'
 ignore '/ignore/**/*'
 
 compile '/404.*' do
-  layout '/new.*'
+  layout '/2021q3.*'
   write '/404.html'
 end
 
@@ -180,8 +180,8 @@ compile '/**/*' do
   filter :toc if item[:toc]
   filter :typography
 
-  if item.identifier.match?('/cv.*')
-    layout '/cv.*'
+  if item[:layout]
+    layout item[:layout]
   else
     layout '/new.*'
   end

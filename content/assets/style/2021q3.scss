@@ -1,0 +1,203 @@
+@import "/assets/style/_util.*";
+
+/** ROOT ********************/
+
+:root {
+  --font-face-base: "Public Sans", sans-serif;
+  --font-face-code: "Iosevka SS08", monospace;
+
+  --font-size-s1: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-l1: calc(var(--font-size-md) * 1.35);
+  --font-size-l2: calc(var(--font-size-l1) * 1.35);
+  --font-size-l3: calc(var(--font-size-l2) * 1.35);
+}
+
+:root {
+  --color-fg: var(--gray-800);
+  --color-bg: var(--gray-100);
+
+  --color-em-fg: var(--red-500);
+
+  --color-muted-fg: var(--gray-500);
+
+  --color-link-fg: var(--blue-500);
+  --color-link-fg-hover: var(--gray-500);
+  --color-link-fg-external: var(--gray-800);
+  --color-link-fg-external-hover: var(--gray-500);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fg: var(--gray-100);
+    --color-bg: var(--gray-800);
+
+    --color-em-fg: var(--red-400);
+
+    --color-muted-fg: var(--gray-300);
+
+    --color-link-fg: var(--blue-400);
+    --color-link-fg-hover: var(--gray-400);
+    --color-link-fg-external: var(--gray-100);
+    --color-link-fg-external-hover: var(--gray-400);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.5; /* 24 px */
+
+  text-rendering: geometricPrecision;
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+body {
+  font-family: var(--font-face-base);
+
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-zone: 8%;
+
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+
+/** WRAPPER ********************/
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+
+  @extend .p-3;
+  @extend .md\:p-4;
+}
+
+.wrapper {
+  max-width: 36rem;
+}
+
+/** BLOCK ELEMENTS ********************/
+
+p {
+  @extend .font-size-md;
+  @extend .line-height-md;
+
+  widows: 2;
+  orphans: 2;
+}
+
+p + p {
+  @extend .mt-3;
+}
+
+.blocks,
+ul,
+ol {
+  @extend .mt-3;
+}
+
+.block-title,
+.block-detail {
+  display: inline;
+}
+
+h1,
+h2 {
+  @extend .font-size-xl;
+  @extend .line-height-xl;
+  font-weight: normal;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2ch;
+
+  @extend .mb-5;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: calc(3 / 4 * 1.5rem);
+}
+
+h1::after {
+  content: "";
+  align-self: center;
+  border-top: 2px solid var(--color-fg);
+}
+
+h2 {
+  @extend .mt-5;
+  @extend .mb-3;
+
+  letter-spacing: -0.03ch;
+}
+
+.meta {
+  @extend .font-size-md;
+  @extend .line-height-md;
+  @extend .text-muted;
+
+  position: relative;
+  top: -1.5rem;
+}
+
+/** INLINE ELEMENTS ********************/
+
+em {
+  font-style: normal;
+  color: var(--color-em-fg);
+}
+
+a {
+  color: var(--color-link-fg);
+
+  text-underline-offset: 0.1875em;
+}
+
+a:hover {
+  color: var(--color-link-fg-hover);
+}
+
+a[href*="//"]:not([href*="denisdefreyne.com"])
+{
+  color: var(--color-link-fg-external);
+}
+
+a[href*="//"]:not([href*="denisdefreyne.com"]):hover
+{
+  color: var(--color-link-fg-external-hover);
+}
+
+/** UTILS ********************/
+
+.text-muted {
+  color: var(--color-muted-fg);
+}

@@ -1,0 +1,13 @@
+---
+stylesheet: "/assets/style/2021q3.*"
+---
+
+<% render '/_wrapper.*', layout: @layout do %>
+    <body>
+        <div class="wrapper">
+            <%= yield %>
+
+            <nav class="mt-5"><%= link_to_unless_current 'main', @items['/index.*'] %> • <%= link_to_unless_current 'software', @items['/software.*'] %> • <%= link_to_unless_current 'talks', @items['/talks.*'] %> • <%= link_to_unless_current 'articles', @items['/articles.*'] %> • <%= link_to_unless_current 'notes', @items['/notes.*'] %> • <%= link_to_unless_current 'cv', @items['/cv.*'] %></nav>
+        </div>
+    </body>
+<% end %>

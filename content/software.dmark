@@ -1,5 +1,6 @@
 ---
 title: Denis’ software
+layout: "/2021q3.*"
 ---
 
 #h1 Software
@@ -12,32 +13,32 @@ title: Denis’ software
 
 #div[class=blocks col-lg]
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/adsf]{adsf}
-    #div is a web server that you can launch instantly in any directory.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/adsf]{adsf}
+    #div[class=block-detail] is a web server that you can launch instantly in any directory.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/cri]{cri}
-    #div helps build command-line applications in Ruby.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/cri]{cri}
+    #div[class=block-detail] helps build command-line applications in Ruby.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/ddmemoize]{ddmemoize}
-    #div implements memoization for Ruby.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/ddmemoize]{ddmemoize}
+    #div[class=block-detail] implements memoization for Ruby.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/ddmetrics]{ddmetrics}
-    #div records and analyses runtime measurements for Ruby apps.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/ddmetrics]{ddmetrics}
+    #div[class=block-detail] records and analyses runtime measurements for Ruby apps.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/ddplugin]{ddplugin}
-    #div is a Ruby library for handling plugins.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/ddplugin]{ddplugin}
+    #div[class=block-detail] is a Ruby library for handling plugins.
 
   #div[class=block]
-    #div %ref[url=https://nanoc.ws]{nanoc}
-    #div is a fast and flexible static-site generator.
+    #div[class=block-title] %ref[url=https://nanoc.ws]{nanoc}
+    #div[class=block-detail] is a fast and flexible static-site generator.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/slow_enumerator_tools]{slow_enumerator_tools}
-    #div supports merging, buffering, … Ruby enumerators.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/slow_enumerator_tools]{slow_enumerator_tools}
+    #div[class=block-detail] supports merging, buffering, … Ruby enumerators.
 
 #h2 Experimental
 
@@ -45,21 +46,21 @@ title: Denis’ software
 
 #div[class=blocks col-lg]
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/d-mark]{d★mark}
-    #div is a semantically-rich markup language for prose.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/d-mark]{d★mark}
+    #div[class=block-detail] is a semantically-rich markup language for prose.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/d-parse]{d★parse}
-    #div is a parser combinator library for Ruby.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/d-parse]{d★parse}
+    #div[class=block-detail] is a parser combinator library for Ruby.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/d-stream]{d★stream}
-    #div allows writing stream-processing code in Ruby.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/d-stream]{d★stream}
+    #div[class=block-detail] allows writing stream-processing code in Ruby.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/glove]{glove}
-    #div is a game engine for Crystal.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/glove]{glove}
+    #div[class=block-detail] is a game engine for Crystal.
 
   #div[class=block]
-    #div %ref[url=https://github.com/ddfreyne/rcpu]{rcpu}
-    #div is a VM emulator and assembler written in Crystal.
+    #div[class=block-title] %ref[url=https://github.com/ddfreyne/rcpu]{rcpu}
+    #div[class=block-detail] is a VM emulator and assembler written in Crystal.

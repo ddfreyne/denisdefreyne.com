@@ -3,6 +3,17 @@
 
 $font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
+$font-sizes: (
+  "xs": 0.75rem,
+  "sm": 0.875rem,
+  "md": 1rem,
+  "lg": 1.125rem,
+  "xl": 1.25rem,
+  "2xl": 1.5rem,
+  "3xl": 1.875rem,
+  "4xl": 2.25rem,
+);
+
 /** SIZING ********************/
 
 .w-100 {
@@ -42,6 +53,16 @@ $font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 @each $font-weight in $font-weights {
   .font-weight-#{$font-weight} {
     font-weight: $font-weight;
+  }
+}
+
+@each $name, $size in $font-sizes {
+  .font-size-#{$name} {
+    font-size: $size;
+  }
+
+  .line-height-#{$name} {
+    line-height: calc($size * 1.5);
   }
 }
 

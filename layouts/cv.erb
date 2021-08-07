@@ -1,4 +1,8 @@
-<% render '/_wrapper.*' do %>
+---
+stylesheet: "/assets/style/cv.*"
+---
+
+<% render '/_wrapper.*', layout: @layout, skip_common_styles: true do %>
     <body class="font-serif bg-gray-100 print:bg-white text-gray-900">
         <div class="min-h-screen md:w-a4width print:w-auto bg-white">
             <div class="px-8 py-6 sm:px-10 sm:py-8 print:px-0 print:py-0">

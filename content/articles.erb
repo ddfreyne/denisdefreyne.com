@@ -1,16 +1,12 @@
 ---
 title: "Articles"
-follow: false
+layout: "/2021q3.*"
 ---
 
 <h1>Articles</h1>
 
-<p class="col-left-sm">This is a collection of articles I’ve written.</p>
-
-<div class="col-right-md">
-  <% sorted_articles.each do |article| %>
-    <h2><%= link_to article[:title], article %></h2>
-    <div class="muted"><%= fmt_date Date.parse(article[:published_on]) %></div>
-    <p class="mb-3"><%= article[:excerpt] %> <%= link_to 'Read more', article %></p>
-  <% end %>
-</div>
+<% sorted_articles.each do |article| %>
+  <h2><%= article[:title] %></h2>
+  <div class="meta"><%= fmt_date Date.parse(article[:published_on]) %></div>
+  <p class="mb-3"><%= article[:excerpt] %> <%= link_to 'Read more', article %></p>
+<% end %>
