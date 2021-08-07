@@ -156,9 +156,15 @@ ol {
   @extend .mt-3;
 }
 
-.block-title,
 .block-detail {
+  @extend .pl-3;
+}
+
+.blocks-inline .block-title,
+.blocks-inline .block-detail {
   display: inline;
+
+  @extend .pl-0;
 }
 
 h1,

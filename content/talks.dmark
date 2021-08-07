@@ -7,58 +7,58 @@ layout: "/2021q3.*"
 
 #p I’ve given a handful of talks over the past few years. The pandemic has taken some of the joy (and possibility) out of it, but I’m hoping to pick it back up in the near future. Here is a list of talks I have given.
 
-#div[class=col-lg blocks]
+#div[class=blocks]
   #div[class=block]
-    #div[class=pb-base] An introduction to fibers
-    #div %ref[url=https://speakerdeck.com/ddfreyne/fibers]{RUG::B edition (2017)}
-    #div %ref[url=https://speakerdeck.com/ddfreyne/an-introduction-to-fibers]{RubyWine 2019 edition}
+    #div[class=block-title] An introduction to fibers
+    #div[class=block-detail] %ref[url=https://speakerdeck.com/ddfreyne/fibers]{RUG::B edition (2017)}
+    #div[class=block-detail] %ref[url=https://speakerdeck.com/ddfreyne/an-introduction-to-fibers]{RubyWine 2019 edition}
 
   #div[class=block]
-    #div[class=pb-base] Code as data
-    #div %ref[url=https://speakerdeck.com/ddfreyne/code-as-data]{RUG::B edition (2018)}
-    #div %ref[url=https://speakerdeck.com/ddfreyne/code-as-data-rubyconfby-2019-edition]{RubyConfBY 2019 edition}
+    #div[class=block-title] Code as data
+    #div[class=block-detail] %ref[url=https://speakerdeck.com/ddfreyne/code-as-data]{RUG::B edition (2018)}
+    #div[class=block-detail] %ref[url=https://speakerdeck.com/ddfreyne/code-as-data-rubyconfby-2019-edition]{RubyConfBY 2019 edition}
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/how-to-memoize]{How to memoize} (2018)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/how-to-memoize]{How to memoize} (2018)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/clean-and-fast-code-with-enumerators]{Clean & fast code with enumerators} (2018)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/clean-and-fast-code-with-enumerators]{Clean & fast code with enumerators} (2018)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/lets-create-a-programming-language-soundcloud-hq-edition]{Let’s create a programming language!} (2016)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/lets-create-a-programming-language-soundcloud-hq-edition]{Let’s create a programming language!} (2016)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/lets-write-a-parser-soundcloud-hq-edition]{Let’s write a parser!} (2016)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/lets-write-a-parser-soundcloud-hq-edition]{Let’s write a parser!} (2016)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/taming-memory-performance-tuning-a-crystal-application-rug-b-edition]{Taming memory: performance-tuning a Crystal application} (2015)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/taming-memory-performance-tuning-a-crystal-application-rug-b-edition]{Taming memory: performance-tuning a Crystal application} (2015)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/i-wanted-a-computer-but-all-i-got-was-a-transistor]{I wanted a computer, but all I got was a transistor} (2015)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/i-wanted-a-computer-but-all-i-got-was-a-transistor]{I wanted a computer, but all I got was a transistor} (2015)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/a-small-smalltalk-talk-rug-b-edition]{A Small Smalltalk talk} (2015)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/a-small-smalltalk-talk-rug-b-edition]{A Small Smalltalk talk} (2015)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/simulating-a-cpu-with-ruby]{Simulating a CPU with Ruby} (2015)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/simulating-a-cpu-with-ruby]{Simulating a CPU with Ruby} (2015)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/creating-games-with-entities-and-components]{Creating games with entities and components} (2014)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/creating-games-with-entities-and-components]{Creating games with entities and components} (2014)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/static-site-generation-for-the-masses]{Static site generation for the masses} (2013)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/static-site-generation-for-the-masses]{Static site generation for the masses} (2013)
 
   #div[class=block]
-    #div[class=pb-base] %ref[url=https://speakerdeck.com/ddfreyne/extending-a-base-product-for-multiple-customers]{Extending a base product for multiple customers} (2012)
+    #div[class=block-title] %ref[url=https://speakerdeck.com/ddfreyne/extending-a-base-product-for-multiple-customers]{Extending a base product for multiple customers} (2012)
 
   #div[class=block]
-    #div[class=pb-base] Static sites with nanoc (2012)
+    #div[class=block-title] Static sites with nanoc (2012)
 
   #div[class=block]
-    #div[class=pb-base] A Small Smalltalk Talk (2011)
+    #div[class=block-title] A Small Smalltalk Talk (2011)
 
   #div[class=block]
-    #div[class=pb-base] Make your web sites faster! (2009)
+    #div[class=block-title] Make your web sites faster! (2009)
 
   #div[class=block]
-    #div[class=pb-base] Metaprogramming and DSLs in Ruby (2009)
+    #div[class=block-title] Metaprogramming and DSLs in Ruby (2009)

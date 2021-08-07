@@ -11,7 +11,7 @@ layout: "/2021q3.*"
 
 #p The following pieces of software have been around for a significant amount of time, are battle-tested and considered stable. You can rely on them.
 
-#div[class=blocks col-lg]
+#div[class=blocks blocks-inline]
   #div[class=block]
     #div[class=block-title] %ref[url=https://github.com/ddfreyne/adsf]{adsf}
     #div[class=block-detail] is a web server that you can launch instantly in any directory.
@@ -44,7 +44,7 @@ layout: "/2021q3.*"
 
 #p The following pieces of software are work in progress. Their APIs are unstable, they are buggy, but… they are probably more exciting than the production-ready ones. Play around with them, but don’t use them for real work.
 
-#div[class=blocks col-lg]
+#div[class=blocks blocks-inline]
   #div[class=block]
     #div[class=block-title] %ref[url=https://github.com/ddfreyne/d-mark]{d★mark}
     #div[class=block-detail] is a semantically-rich markup language for prose.
