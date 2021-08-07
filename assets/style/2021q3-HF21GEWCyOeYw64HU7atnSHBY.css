@@ -1943,7 +1943,7 @@
   padding-top: calc(4 * 0.375rem) !important;
   padding-bottom: calc(4 * 0.375rem) !important; }
 
-.p-3, body {
+.p-3 {
   padding-top: calc(4 * 0.375rem) !important;
   padding-right: calc(4 * 0.375rem) !important;
   padding-bottom: calc(4 * 0.375rem) !important;
@@ -1971,7 +1971,7 @@ ol {
   margin-top: calc(4 * 0.375rem) !important;
   margin-bottom: calc(4 * 0.375rem) !important; }
 
-.m-3 {
+.m-3, .body-inside {
   margin-top: calc(4 * 0.375rem) !important;
   margin-right: calc(4 * 0.375rem) !important;
   margin-bottom: calc(4 * 0.375rem) !important;
@@ -2478,7 +2478,7 @@ ol {
     padding-top: calc(8 * 0.375rem) !important;
     padding-bottom: calc(8 * 0.375rem) !important; }
 
-  .md\:p-4, body {
+  .md\:p-4 {
     padding-top: calc(8 * 0.375rem) !important;
     padding-right: calc(8 * 0.375rem) !important;
     padding-bottom: calc(8 * 0.375rem) !important;
@@ -2504,7 +2504,7 @@ ol {
     margin-top: calc(8 * 0.375rem) !important;
     margin-bottom: calc(8 * 0.375rem) !important; }
 
-  .md\:m-4 {
+  .md\:m-4, .body-inside {
     margin-top: calc(8 * 0.375rem) !important;
     margin-right: calc(8 * 0.375rem) !important;
     margin-bottom: calc(8 * 0.375rem) !important;
@@ -3270,21 +3270,47 @@ body {
   hyphenate-limit-last: always;
   hyphenate-limit-zone: 8%; }
 
-/** WRAPPER ********************/
+/** WRAPPER + NAVIGATION ********************/
 body {
   background: var(--color-bg);
   color: var(--color-fg); }
 
 .body {
-  max-width: 40rem; }
+  min-height: 100vh; }
 
+.body-inside {
+  max-width: 36rem; }
+
+.nav {
+  background: var(--color-bg-nav); }
+
+.nav-inside {
+  padding: 1.25rem; }
+
+.nav .active,
+.nav a {
+  margin-left: 1rem; }
+
+.nav .active:first-child,
+.nav a:first-child {
+  margin-left: 0; }
+
+@media screen and (max-width: 40rem) {
+  .body {
+    display: flex;
+    flex-direction: column; }
+
+  .body-inside {
+    flex-grow: 1; }
+
+  .nav {
+    flex-grow: 0; } }
 @media screen and (min-width: 40rem) {
   .body {
     padding-left: 4rem; }
 
   .nav {
     width: 100vh;
-    background: var(--color-bg-nav);
     position: fixed;
     bottom: 0;
     left: 4rem;
@@ -3292,16 +3318,15 @@ body {
     transform: rotate(-90deg);
     text-align: right; }
 
-  .nav .sep {
-    opacity: 0;
-    padding: 0 0.25rem; }
-
   .nav-inside {
     padding: 1.5rem; } }
 /** BLOCK ELEMENTS ********************/
 p {
   widows: 2;
   orphans: 2; }
+
+ul.no-bullets {
+  list-style-type: none; }
 
 .blocks-inline .block-title,
 .blocks-inline .block-detail {
