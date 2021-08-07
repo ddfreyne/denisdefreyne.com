@@ -20,6 +20,15 @@
 
   --color-em-fg: var(--red-500);
 
+  --color-mark-bg: var(--yellow-300);
+  --color-mark-fg: #000;
+
+  --color-pre-bg: var(--gray-100);
+  --color-pre-fg: #000;
+
+  --color-code-fg: var(--teal-800);
+  --color-code-fg-muted: var(--teal-600);
+
   --color-muted-fg: var(--gray-500);
 
   --color-link-fg: var(--blue-500);
@@ -35,6 +44,15 @@
     --color-bg-nav: var(--gray-700);
 
     --color-em-fg: var(--red-400);
+
+    --color-mark-bg: var(--yellow-900);
+    --color-mark-fg: #fff;
+
+    --color-pre-bg: var(--gray-900);
+    --color-pre-fg: #fff;
+
+    --color-code-fg: var(--teal-200);
+    --color-code-fg-muted: var(--teal-300);
 
     --color-muted-fg: var(--gray-300);
 
@@ -282,9 +300,14 @@ blockquote strong {
 
 /** INLINE ELEMENTS ********************/
 
-em {
-  font-style: normal;
+strong {
+  font-weight: normal;
   color: var(--color-em-fg);
+}
+
+mark strong {
+  font-weight: bold;
+  color: #fff;
 }
 
 a {
