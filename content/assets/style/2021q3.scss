@@ -229,6 +229,26 @@ a[href*="//"]:not([href*="denisdefreyne.com"])
   color: var(--color-link-fg-external);
 }
 
+a[href*="//"]:not([href*="denisdefreyne.com"]):after
+{
+  content: "►";
+
+  transform-origin: middle middle;
+  transform: rotate(-45deg);
+
+  font-family: var(--font-face-code);
+
+  display: inline-block;
+
+  position: relative;
+
+  width: 0.5rem;
+  top: -0.35rem;
+  left: 0rem;
+
+  text-decoration: none;
+}
+
 a[href*="//"]:not([href*="denisdefreyne.com"]):hover
 {
   color: var(--color-link-fg-external-hover);
