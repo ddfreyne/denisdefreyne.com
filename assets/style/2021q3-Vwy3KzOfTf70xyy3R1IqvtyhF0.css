@@ -3400,7 +3400,7 @@ strong {
 
 mark strong {
   font-weight: bold;
-  color: #fff; }
+  color: var(--color-fg); }
 
 a {
   color: var(--color-link-fg);
