@@ -141,14 +141,6 @@ compile '/articles/*.{md,md.erb,dmark}' do
   write item.identifier.without_exts + '/index.html'
 end
 
-compile '/notes.*' do
-  filter :erb
-
-  layout '/note.*'
-
-  write item.identifier.without_exts + '/index.html'
-end
-
 compile '/notes/*' do
   filter :wikilinks
   filter :mark
