@@ -4,10 +4,10 @@ stylesheet: "/assets/style/2021q3.*"
 
 <% render '/_wrapper.*', layout: @layout do %>
     <body>
-        <div class="wrapper">
+        <div class="body">
             <%= yield %>
 
-            <nav class="mt-5"><%= link_to_unless_current 'main', @items['/index.*'] %> • <%= link_to_unless_current 'software', @items['/software.*'] %> • <%= link_to_unless_current 'talks', @items['/talks.*'] %> • <%= link_to_unless_current 'articles', @items['/articles.*'] %> • <%= link_to_unless_current 'notes', @items['/notes.*'] %> • <%= link_to_unless_current 'cv', @items['/cv.*'] %></nav>
+            <nav class="mt-5 md:mt-0 nav"><div class="nav-inside"><%= link_to_unless_current 'main', @items['/index.*'] %><span class="sep"> • </span><%= link_to_unless_current 'software', @items['/software.*'] %><span class="sep"> • </span><%= link_to_unless_current 'talks', @items['/talks.*'] %><span class="sep"> • </span><%= link_to_unless_current 'articles', @items['/articles.*'] %><span class="sep"> • </span><%= link_to_unless_current 'notes', @items['/notes.*'] %><span class="sep"> • </span><%= link_to_unless_current 'cv', @items['/cv.*'] %></div></nav>
         </div>
     </body>
 <% end %>
