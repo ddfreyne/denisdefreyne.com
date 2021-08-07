@@ -1,27 +1,14 @@
-<% render '/_wrapper.*' do %>
-  <div class="py-3 px-3 pos-fixed bg-root border-b-1-gray-200 dark:border-b-1-gray-700 z-100 w-100">// <a href="/">denisdefreyne.com</a> / <%= link_to_unless_current 'notes', @items['/notes.*'] %></div>
+<% render '/2021q3.*' do %>
+  <h1 class="mb-4"><%= @item[:title] %></h1>
 
-  <div class="wrapper pt-5 pb-4 px-3">
-    <div>
-      <div class="sidenote text-muted font-normal pt-3">
-        <% if @item[:updated_at] %>
-          <div class="pt-2">Last revised:</div>
-          <div class="pb-3"><%= fmt_date(@item[:updated_at]) %></div>
-        <% end %>
+  <div class="meta mb-5">
+    <div>Last edited <%= fmt_date(@item[:updated_at]) %></div>
 
-        <% if @item[:is_linked_from]&.any? %>
-          <div class="">Backlinks:</div>
-          <div class="pb-3 text-indent-inverted">
-            <% @item[:is_linked_from].map { |id| @items[id] }.sort_by { |i| i[:title] }.each do |note| %>
-              <div><%= link_to note[:title], note %></div>
-            <% end %>
-          </div>
-        <% end %>
+    <% if @item[:is_linked_from]&.any? %>
+      <div class="">Backlinks: <%= @item[:is_linked_from].map { |id| @items[id] }.sort_by { |i| i[:title] }.map { |note| link_to(note[:title], note) }.join(', ') %>
       </div>
-    </div>
-
-    <h1><%= @item[:title] %></h1>
-
-    <%= yield %>
+    <% end %>
   </div>
+
+  <%= yield %>
 <% end %>

@@ -5,11 +5,20 @@ stylesheet: "/assets/style/2021q3.*"
 <% render '/_wrapper.*', layout: @layout do %>
     <body>
         <div class="body">
-            <div class="body-inside">
+            <div class="body-inside sidenote-container">
                 <%= yield %>
             </div>
 
-            <nav class="mt-5 md:mt-0 nav"><div class="nav-inside"><%= link_to_unless_current 'main', @items['/index.*'] %><%= link_to_unless_current 'software', @items['/software.*'] %><%= link_to_unless_current 'talks', @items['/talks.*'] %><%= link_to_unless_current 'articles', @items['/articles.*'] %><%= link_to_unless_current 'notes', @items['/notes.*'] %><%= link_to_unless_current 'cv', @items['/cv.*'] %></div></nav>
+            <nav class="mt-5 md:mt-0 nav">
+                <ul>
+                    <li><%= link_to_unless_current 'main', @items['/index.*'] %></li>
+                    <li><%= link_to_unless_current 'software', @items['/software.*'] %></li>
+                    <li><%= link_to_unless_current 'talks', @items['/talks.*'] %></li>
+                    <li><%= link_to_unless_current 'articles', @items['/articles.*'] %></li>
+                    <li><%= link_to_unless_current 'notes', @items['/notes.*'] %></li>
+                    <li><%= link_to_unless_current 'cv', @items['/cv.*'] %></li>
+                </ul>
+            </nav>
         </div>
     </body>
 <% end %>

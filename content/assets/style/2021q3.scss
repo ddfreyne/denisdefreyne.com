@@ -106,25 +106,26 @@ body {
 .body-inside {
   max-width: 36rem;
 
-  @extend .m-3;
-  @extend .md\:m-4;
+  @extend .p-3;
+  @extend .md\:p-4;
 }
 
 .nav {
   background: var(--color-bg-nav);
 }
 
-.nav-inside {
+.nav ul {
   padding: 1.25rem;
 }
 
-.nav .active,
-.nav a {
+.nav li {
+  list-style-type: none;
+  display: inline;
+
   margin-left: 1rem;
 }
 
-.nav .active:first-child,
-.nav a:first-child {
+.nav li:first-child {
   margin-left: 0;
 }
 
@@ -162,7 +163,7 @@ body {
     text-align: right;
   }
 
-  .nav-inside {
+  .nav ul {
     padding: 1.5rem;
   }
 }
@@ -177,18 +178,42 @@ p {
   orphans: 2;
 }
 
-p + p {
-  @extend .mt-3;
-}
-
-.blocks,
-ul,
-ol {
+* + p,
+* + .blocks,
+* + ul,
+* + ol,
+* + blockquote,
+* + pre {
   @extend .mt-3;
 }
 
 ul.no-bullets {
   list-style-type: none;
+  @extend .pl-0;
+}
+
+ul,
+ol {
+  @extend .pl-3;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  @extend .mt-0;
+}
+
+.spaced > li {
+  margin-top: 1.5rem;
 }
 
 .block-detail {
@@ -211,7 +236,7 @@ h2 {
 
 h1 {
   text-transform: uppercase;
-  letter-spacing: 0.2ch;
+  letter-spacing: 0.15ch;
 
   @extend .mb-5;
 
@@ -240,6 +265,19 @@ h2 {
 
   position: relative;
   top: -1.5rem;
+}
+
+blockquote {
+  font-style: italic;
+  padding-left: 1.5rem;
+}
+
+blockquote em {
+  font-style: normal;
+}
+
+blockquote strong {
+  font-style: normal;
 }
 
 /** INLINE ELEMENTS ********************/
@@ -287,6 +325,109 @@ a[href*="//"]:not([href*="denisdefreyne.com"]):after
 a[href*="//"]:not([href*="denisdefreyne.com"]):hover
 {
   color: var(--color-link-fg-external-hover);
+}
+
+del {
+  color: var(--red-500);
+}
+
+ins {
+  color: var(--green-600);
+}
+
+mark {
+  background: var(--color-mark-bg);
+  color: var(--color-fg-mark);
+}
+
+.path {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+  font-style: italic;
+}
+
+/** CODE ********************/
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-face-code);
+  font-weight: 400;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+code {
+  color: var(--color-code-fg);
+}
+
+pre > code {
+  color: var(--color-pre-fg);
+}
+
+pre {
+  break-before: avoid;
+  break-inside: avoid;
+
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--color-pre-bg);
+  color: var(--color-pre-fg);
+
+  white-space: pre-wrap;
+}
+
+/** SIDENOTES **********/
+
+.sidenote-container {
+  position: relative;
+}
+
+.sidenote {
+  font-family: var(--font-face-base);
+}
+
+@media screen and (max-width: 60rem) {
+  .sidenote {
+    display: inline;
+    font-style: italic;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .sidenote {
+    position: absolute;
+
+    display: block;
+
+    width: 12rem;
+    left: calc(100% - 1.5rem);
+
+    margin-top: -1.5rem;
+  }
+
+  .sidenote,
+  .sidenote code {
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+
+  .sidenote-pre,
+  .sidenote-post {
+    display: none;
+  }
+
+  .sidenote {
+    display: block;
+    font-style: normal;
+  }
 }
 
 /** UTILS ********************/
