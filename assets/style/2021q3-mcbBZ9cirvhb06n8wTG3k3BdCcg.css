@@ -3212,6 +3212,7 @@ h2 {
 :root {
   --color-fg: var(--gray-800);
   --color-bg: var(--gray-100);
+  --color-bg-nav: var(--gray-200);
   --color-em-fg: var(--red-500);
   --color-muted-fg: var(--gray-500);
   --color-link-fg: var(--blue-500);
@@ -3223,6 +3224,7 @@ h2 {
   :root {
     --color-fg: var(--gray-100);
     --color-bg: var(--gray-800);
+    --color-bg-nav: var(--gray-700);
     --color-em-fg: var(--red-400);
     --color-muted-fg: var(--gray-300);
     --color-link-fg: var(--blue-400);
@@ -3271,9 +3273,29 @@ body {
   background: var(--color-bg);
   color: var(--color-fg); }
 
-.wrapper {
-  max-width: 36rem; }
+.body {
+  max-width: 40rem; }
 
+@media screen and (min-width: 40rem) {
+  .body {
+    padding-left: 4rem; }
+
+  .nav {
+    width: 100vh;
+    background: var(--color-bg-nav);
+    position: fixed;
+    bottom: 0;
+    left: 4rem;
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+    text-align: right; }
+
+  .nav .sep {
+    opacity: 0;
+    padding: 0 0.25rem; }
+
+  .nav-inside {
+    padding: 1.5rem; } }
 /** BLOCK ELEMENTS ********************/
 p {
   widows: 2;
