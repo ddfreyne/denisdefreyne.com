@@ -1700,7 +1700,7 @@
 .pb-0 {
   padding-bottom: calc(0 * 0.375rem) !important; }
 
-.pl-0, .blocks-inline .block-title,
+.pl-0, ul.no-bullets, .blocks-inline .block-title,
 .blocks-inline .block-detail {
   padding-left: calc(0 * 0.375rem) !important; }
 
@@ -1721,7 +1721,10 @@
   padding-bottom: calc(0 * 0.375rem) !important;
   padding-left: calc(0 * 0.375rem) !important; }
 
-.mt-0 {
+.mt-0, ul ul,
+ul ol,
+ol ul,
+ol ol {
   margin-top: calc(0 * 0.375rem) !important; }
 
 .mb-0 {
@@ -1929,7 +1932,8 @@
 .pb-3 {
   padding-bottom: calc(4 * 0.375rem) !important; }
 
-.pl-3, .block-detail {
+.pl-3, ul,
+ol, .block-detail {
   padding-left: calc(4 * 0.375rem) !important; }
 
 .pr-3 {
@@ -1943,15 +1947,18 @@
   padding-top: calc(4 * 0.375rem) !important;
   padding-bottom: calc(4 * 0.375rem) !important; }
 
-.p-3 {
+.p-3, .body-inside {
   padding-top: calc(4 * 0.375rem) !important;
   padding-right: calc(4 * 0.375rem) !important;
   padding-bottom: calc(4 * 0.375rem) !important;
   padding-left: calc(4 * 0.375rem) !important; }
 
-.mt-3, p + p, .blocks,
-ul,
-ol {
+.mt-3, * + p,
+* + .blocks,
+* + ul,
+* + ol,
+* + blockquote,
+* + pre {
   margin-top: calc(4 * 0.375rem) !important; }
 
 .mb-3, h2 {
@@ -1971,7 +1978,7 @@ ol {
   margin-top: calc(4 * 0.375rem) !important;
   margin-bottom: calc(4 * 0.375rem) !important; }
 
-.m-3, .body-inside {
+.m-3 {
   margin-top: calc(4 * 0.375rem) !important;
   margin-right: calc(4 * 0.375rem) !important;
   margin-bottom: calc(4 * 0.375rem) !important;
@@ -2478,7 +2485,7 @@ ol {
     padding-top: calc(8 * 0.375rem) !important;
     padding-bottom: calc(8 * 0.375rem) !important; }
 
-  .md\:p-4 {
+  .md\:p-4, .body-inside {
     padding-top: calc(8 * 0.375rem) !important;
     padding-right: calc(8 * 0.375rem) !important;
     padding-bottom: calc(8 * 0.375rem) !important;
@@ -2504,7 +2511,7 @@ ol {
     margin-top: calc(8 * 0.375rem) !important;
     margin-bottom: calc(8 * 0.375rem) !important; }
 
-  .md\:m-4, .body-inside {
+  .md\:m-4 {
     margin-top: calc(8 * 0.375rem) !important;
     margin-right: calc(8 * 0.375rem) !important;
     margin-bottom: calc(8 * 0.375rem) !important;
@@ -3216,6 +3223,12 @@ h2 {
   --color-bg: var(--gray-100);
   --color-bg-nav: var(--gray-200);
   --color-em-fg: var(--red-500);
+  --color-mark-bg: var(--yellow-300);
+  --color-mark-fg: #000;
+  --color-pre-bg: var(--gray-100);
+  --color-pre-fg: #000;
+  --color-code-fg: var(--teal-800);
+  --color-code-fg-muted: var(--teal-600);
   --color-muted-fg: var(--gray-500);
   --color-link-fg: var(--blue-500);
   --color-link-fg-hover: var(--gray-500);
@@ -3228,6 +3241,12 @@ h2 {
     --color-bg: var(--gray-800);
     --color-bg-nav: var(--gray-700);
     --color-em-fg: var(--red-400);
+    --color-mark-bg: var(--yellow-900);
+    --color-mark-fg: #fff;
+    --color-pre-bg: var(--gray-900);
+    --color-pre-fg: #fff;
+    --color-code-fg: var(--teal-200);
+    --color-code-fg-muted: var(--teal-300);
     --color-muted-fg: var(--gray-300);
     --color-link-fg: var(--blue-400);
     --color-link-fg-hover: var(--gray-400);
@@ -3284,15 +3303,15 @@ body {
 .nav {
   background: var(--color-bg-nav); }
 
-.nav-inside {
+.nav ul {
   padding: 1.25rem; }
 
-.nav .active,
-.nav a {
+.nav li {
+  list-style-type: none;
+  display: inline;
   margin-left: 1rem; }
 
-.nav .active:first-child,
-.nav a:first-child {
+.nav li:first-child {
   margin-left: 0; }
 
 @media screen and (max-width: 40rem) {
@@ -3318,7 +3337,7 @@ body {
     transform: rotate(-90deg);
     text-align: right; }
 
-  .nav-inside {
+  .nav ul {
     padding: 1.5rem; } }
 /** BLOCK ELEMENTS ********************/
 p {
@@ -3327,6 +3346,15 @@ p {
 
 ul.no-bullets {
   list-style-type: none; }
+
+ol {
+  list-style-type: decimal; }
+
+ol ol {
+  list-style-type: lower-alpha; }
+
+.spaced > li {
+  margin-top: 1.5rem; }
 
 .blocks-inline .block-title,
 .blocks-inline .block-detail {
@@ -3338,7 +3366,7 @@ h2 {
 
 h1 {
   text-transform: uppercase;
-  letter-spacing: 0.2ch;
+  letter-spacing: 0.15ch;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: calc(3 / 4 * 1.5rem); }
@@ -3355,10 +3383,24 @@ h2 {
   position: relative;
   top: -1.5rem; }
 
+blockquote {
+  font-style: italic;
+  padding-left: 1.5rem; }
+
+blockquote em {
+  font-style: normal; }
+
+blockquote strong {
+  font-style: normal; }
+
 /** INLINE ELEMENTS ********************/
-em {
-  font-style: normal;
+strong {
+  font-weight: normal;
   color: var(--color-em-fg); }
+
+mark strong {
+  font-weight: bold;
+  color: #fff; }
 
 a {
   color: var(--color-link-fg);
@@ -3385,6 +3427,81 @@ a[href*="//"]:not([href*="denisdefreyne.com"]):after {
 a[href*="//"]:not([href*="denisdefreyne.com"]):hover {
   color: var(--color-link-fg-external-hover); }
 
+del {
+  color: var(--red-500); }
+
+ins {
+  color: var(--green-600); }
+
+mark {
+  background: var(--color-mark-bg);
+  color: var(--color-fg-mark); }
+
+.path {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  font-style: italic; }
+
+/** CODE ********************/
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-face-code);
+  font-weight: 400;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+code {
+  color: var(--color-code-fg); }
+
+pre > code {
+  color: var(--color-pre-fg); }
+
+pre {
+  break-before: avoid;
+  break-inside: avoid;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--color-pre-bg);
+  color: var(--color-pre-fg);
+  white-space: pre-wrap; }
+
+/** SIDENOTES **********/
+.sidenote-container {
+  position: relative; }
+
+.sidenote {
+  font-family: var(--font-face-base); }
+
+@media screen and (max-width: 60rem) {
+  .sidenote {
+    display: inline;
+    font-style: italic; } }
+@media screen and (min-width: 60rem) {
+  .sidenote {
+    position: absolute;
+    display: block;
+    width: 12rem;
+    left: calc(100% - 1.5rem);
+    margin-top: -1.5rem; }
+
+  .sidenote,
+  .sidenote code {
+    font-size: 0.85rem;
+    line-height: 1.35; }
+
+  .sidenote-pre,
+  .sidenote-post {
+    display: none; }
+
+  .sidenote {
+    display: block;
+    font-style: normal; } }
 /** UTILS ********************/
 .text-muted, .meta {
   color: var(--color-muted-fg); }

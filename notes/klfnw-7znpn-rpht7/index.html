@@ -35,7 +35,7 @@
             <link rel="stylesheet" href="../../assets/fonts/main.css">
         
         
-        <link rel="stylesheet" href="../../assets/style/note-EC2rbn57bZZQSxBrDDfKqEsnE.css">
+        <link rel="stylesheet" href="../../assets/style/2021q3-UavtqNPlr5BxUJKeiucHuobhq6E.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="alternate" type="application/atom+xml" href="../../feed.xml" title="Atom feed for denisdefreyne.com articles">
@@ -54,30 +54,22 @@
     </head>
 
     
-  <body><div class="py-3 px-3 pos-fixed bg-root border-b-1-gray-200 dark:border-b-1-gray-700 z-100 w-100">// <a href="../../">denisdefreyne.com</a> / <a href="../">notes</a></div>
+    <body>
+        <div class="body">
+            <div class="body-inside sidenote-container">
+                
+  <h1 class="mb-4">A globally-available filesystem prevents access tracing</h1>
 
-  <div class="wrapper pt-5 pb-4 px-3">
-    <div>
-      <div class="sidenote text-muted font-normal pt-3">
-        
-          <div class="pt-2">Last revised:</div>
-          <div class="pb-3">April 2021</div>
-        
-
-        
-          <div class="">Backlinks:</div>
-          <div class="pb-3 text-indent-inverted">
-            
-              <div><a href="../wtc9r-khvlc-rxfc9/">The filesystem is global mutable state</a></div>
-            
-          </div>
-        
-      </div>
-    </div>
-
-    <h1>A globally-available filesystem prevents access tracing</h1>
+  <div class="meta mb-5">
+    <div>Last edited April 2021</div>
 
     
+      <div class="">Backlinks: <a href="../wtc9r-khvlc-rxfc9/">The filesystem is global mutable state</a>
+      </div>
+    
+  </div>
+
+  
 <p>Tracing filesystem access is useful to figure out what a certain part of a program does, and taking actions based on that, such as creating a file dependency&nbsp;graph.</p>
 
 <p>Tracing filesystem access can only be done when the filesystem is not globally available. Otherwise, filesystem access tracing cannot be done reliably when multiple parts of a program access the filesystem in&nbsp;parallel.</p>
@@ -92,11 +84,26 @@
 
 <p><a href="https://www.bazel.build">Bazel</a> requires dependencies to be stated explicitly (thus eliminating the need for access tracing) and supports <a href="https://docs.bazel.build/versions/master/sandboxing.html">sandboxing</a> to enforce correctness of these dependency&nbsp;declarations.</p>
 
-  </div>
+
+            </div>
+
+            <nav class="mt-5 md:mt-0 nav">
+                <ul>
+                    <li><a href="../../">main</a></li>
+                    <li><a href="../../software/">software</a></li>
+                    <li><a href="../../talks/">talks</a></li>
+                    <li><a href="../../articles/">articles</a></li>
+                    <li><a href="../">notes</a></li>
+                    <li><a href="../../cv/">cv</a></li>
+                </ul>
+            </nav>
+        </div>
+    
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+
 
 
 </body></html>
