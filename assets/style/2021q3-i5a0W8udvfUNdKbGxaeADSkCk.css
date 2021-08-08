@@ -3239,10 +3239,10 @@ h2 {
   :root {
     --color-fg: var(--gray-100);
     --color-bg: var(--gray-800);
-    --color-bg-nav: var(--gray-700);
+    --color-bg-nav: var(--gray-900);
     --color-em-fg: var(--red-400);
-    --color-mark-bg: var(--yellow-900);
-    --color-mark-fg: #fff;
+    --color-mark-bg: #000;
+    --color-mark-fg: var(--yellow-500);
     --color-pre-bg: var(--gray-900);
     --color-pre-fg: #fff;
     --color-code-fg: var(--teal-200);
@@ -3430,7 +3430,7 @@ ins {
 
 mark {
   background: var(--color-mark-bg);
-  color: var(--color-fg-mark); }
+  color: var(--color-mark-fg); }
 
 .path {
   -webkit-hyphens: none;
