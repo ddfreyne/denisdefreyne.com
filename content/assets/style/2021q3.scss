@@ -147,7 +147,7 @@ body {
   margin-left: 0;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 40rem), screen and (max-height: 30rem) {
   .body {
     display: flex;
 
@@ -163,7 +163,7 @@ body {
   }
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 40rem) and (min-height: 30rem) {
   .body {
     padding-left: 4rem;
   }
