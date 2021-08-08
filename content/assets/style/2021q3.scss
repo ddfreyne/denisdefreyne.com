@@ -300,14 +300,8 @@ blockquote strong {
 
 /** INLINE ELEMENTS ********************/
 
-strong {
-  font-weight: normal;
+.highlight {
   color: var(--color-em-fg);
-}
-
-mark strong {
-  font-weight: bold;
-  color: var(--color-fg);
 }
 
 a {
