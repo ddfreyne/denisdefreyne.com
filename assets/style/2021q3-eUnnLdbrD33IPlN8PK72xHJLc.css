@@ -3261,7 +3261,7 @@ html {
   /* 24 px */
   text-rendering: geometricPrecision; }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) and (min-height: 600px) {
   html {
     font-size: 112.5%; } }
 body {
@@ -3314,7 +3314,7 @@ body {
 .nav li:first-child {
   margin-left: 0; }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 40rem), screen and (max-height: 30rem) {
   .body {
     display: flex;
     flex-direction: column; }
@@ -3324,7 +3324,7 @@ body {
 
   .nav {
     flex-grow: 0; } }
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 40rem) and (min-height: 30rem) {
   .body {
     padding-left: 4rem; }
 
