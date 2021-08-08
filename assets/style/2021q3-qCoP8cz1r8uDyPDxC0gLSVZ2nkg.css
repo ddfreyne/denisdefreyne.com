@@ -3394,13 +3394,8 @@ blockquote strong {
   font-style: normal; }
 
 /** INLINE ELEMENTS ********************/
-strong {
-  font-weight: normal;
+.highlight {
   color: var(--color-em-fg); }
-
-mark strong {
-  font-weight: bold;
-  color: var(--color-fg); }
 
 a {
   color: var(--color-link-fg);

@@ -1,7 +1,7 @@
 <!DOCTYPE html><html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile# zotero: http://www.zotero.org/namespaces/export#" lang="en"><head>
         <meta charset="utf-8">
 
-        <title>Taking a break is better than excess context switching</title>
+        <title>Logistics games can teach you engineering</title>
 
         <!-- metadata -->
 
@@ -11,10 +11,10 @@
 
         <meta property="og:site_name" content="denisdefreyne.com">
 
-        <meta property="og:url" content="https://denisdefreyne.com/notes/czxk7-h7rmx-nmfmm/">
+        <meta property="og:url" content="https://denisdefreyne.com/notes/mnw7p-lnffm-fpfrw/">
 
-        <meta property="og:title" content="Taking a break is better than excess context switching">
-        <meta property="dc.title" content="Taking a break is better than excess context switching">
+        <meta property="og:title" content="Logistics games can teach you engineering">
+        <meta property="dc.title" content="Logistics games can teach you engineering">
 
         <meta property="og:type" content="website">
 
@@ -58,30 +58,35 @@
         <div class="body">
             <div class="body-inside sidenote-container">
                 
-  <h1 class="mb-4">Taking a break is better than excess context switching</h1>
+  <h1 class="mb-4">Logistics games can teach you engineering</h1>
 
   <div class="meta mb-5">
-    <div>Last edited January 2021</div>
+    <div>Last edited August 2021</div>
 
-    
-      <div class="">Backlinks: <a href="../r7c9t-kmxp7-rzmtt/">You are not paid to be busy</a>
-      </div>
     
   </div>
 
   
-<p>There are situations where work can’t immediately continue,&nbsp;e.g.</p>
+<p>Games like Factorio, Satisfactory, … can teach you concepts that are relevant in (software)&nbsp;engineering.</p>
 
+<h2 id="technical-debt">Technical&nbsp;debt</h2>
+<p><a href="../htptw-xxklc-cf77m/">Logistics games teach you about tech debt</a></p>
+
+<h2 id="scalability">Scalability</h2>
 <ul>
-  <li>You’re running automated tests (even though these should not take long)</li>
-  <li>You’re waiting for a code review</li>
+  <li>Designing a factory that can grow over time is not trivial.</li>
+  <li>Designing a transportation bus that can grow (higher throughput) over time is not trivial.</li>
 </ul>
 
-<p>In such cases, I find it tempting to pick up a different task to work on in parallel, but the context switching overhead often makes it not worth it. This secondary task I picked up won’t have my full attention, as I’m really waiting to resume working on the primary&nbsp;task.</p>
+<h2 id="queueing-theory">Queueing&nbsp;theory</h2>
+<ul>
+  <li>Factorio comes with backpressure by default. You can get around it by adding buffers (crates), if you need that.</li>
+  <li>Trains vs. belts: Trains are higher latency (unless they’re very far away, in which trains are lower latency) but higher throughput.</li>
+  <li>Shared queue ensure throughput remains high.</li>
+</ul>
 
-<p>I find it better to take a break (or dedicate myself to a on-work task) in such a situation. This is easiest in a non-synchronous environment, because <a href="../rxvzv-w9zln-ncnzl/">Asynchronous working environments make it easier to divide up time</a>.</p>
-
-<p>This doesn’t only happen to me: In one particular case, I saw someone keep working on a change list, adding non-requested and even non-useful features, presumably to avoid being stuck in the situation of having to wait for a code review and having nothing to do. (Though this might be just my&nbsp;interpretation.)</p>
+<h2 id="microservices">Microservices</h2>
+<p>I found that it’s good to place multiple separate factories and connect them up (usually with trains, but you could do it with belts as well). These are comparable to&nbsp;microservices.</p>
 
 
             </div>
